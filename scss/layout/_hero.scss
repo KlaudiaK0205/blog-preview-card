@@ -1,0 +1,48 @@
+@use '../util' as u;
+
+.card {
+    background-color: var(--c-card-background);
+    padding: u.rem(24);
+    border: solid 1px hsl(0, 0%, 0%);
+    border-radius: u.rem(20);
+    box-shadow: 8px 8px hsl(0, 0%, 0%);
+
+    &__img {
+        border-radius: u.rem(10);
+        margin-bottom: 24px;
+    }
+
+    &__category {
+        display: flex;
+        background-color: var(--c-background);
+        padding: u.rem(4) u.rem(12);
+        text-align: center;
+        max-width: u.rem(73);
+        border-radius: u.rem(4);
+
+        @include u.breakpoint(large) {
+            max-width: u.rem(82);
+        }
+    }
+
+    &__published {
+        padding: 12px 0;
+    }
+
+    &__description {
+        padding-top: u.rem(12);
+        padding-bottom: u.rem(24);
+        color: var(--c-text);
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    &__author-img {
+        margin-right: u.rem(12);
+        }
+}

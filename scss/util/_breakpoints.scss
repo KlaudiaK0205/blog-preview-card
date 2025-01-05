@@ -1,0 +1,11 @@
+//do 800px (mobile), od 801 do 1440px (desktop)
+
+$breakpoints-up: (
+    "large": 800px
+);
+
+@mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }     
+}
